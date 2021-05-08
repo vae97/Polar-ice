@@ -1,13 +1,16 @@
 import React from 'react';
-import {Button} from '@material-ui/core';
+import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Landings from '../src/Landing'
 
 function App() {
 
   
   return (
-    <div className="App">
-      <Button color="primary" variant="contained">Hello</Button>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Landings} />
+      </Switch>
+  </Router>
   );
 }
 
